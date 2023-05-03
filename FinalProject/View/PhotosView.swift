@@ -19,13 +19,13 @@ struct PhotosView: View {
                     ForEach(photosVM.photoAlbum, id: \.id) { photoData in
                         HStack {
                             VStack {
-                                
                                 AsyncImage(url: URL(string: photoData.thumbnailUrl)) { phase in
                                     if let image = phase.image {
                                         image.resizable()
                                             .scaledToFill()
                                             .frame(width: imageSize, height: imageSize)
                                             .clipped()
+                                            .cornerRadius(5)
                                         
                                     } else if phase.error != nil {
                                         
@@ -36,21 +36,20 @@ struct PhotosView: View {
                                         ProgressView()
                                             .frame(width: imageSize, height: imageSize)
                                     }
-                                    
                                 }
-                                
                             }.frame(alignment: .leading)
                             VStack {
                                 Text(photoData.title)
                                     .frame(alignment: .leading)
                                     .multilineTextAlignment(.leading)
                             }
-                        }
-                    }.navigationTitle("Photos")
-                        .onAppear {
-                            photosVM.getPhotoAlbum()
-                        }
-                }
+                            Spacer()
+                        }.padding(.horizontal)
+                    }
+                }.navigationTitle("Photos")
+                    .onAppear {
+                        photosVM.getPhotoAlbum()
+                    }
             }
         }
     }
