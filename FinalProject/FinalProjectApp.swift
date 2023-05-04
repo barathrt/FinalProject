@@ -14,8 +14,8 @@ struct FinalProjectApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            LoginView()
-            PhotosView()
+            LoginView()
+//            PhotosView()
 //                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }

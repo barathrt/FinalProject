@@ -17,38 +17,29 @@ struct PhotosView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(photosVM.photoAlbum, id: \.id) { photoData in
-                        HStack {
-                            VStack {
-                                AsyncImage(url: URL(string: photoData.thumbnailUrl)) { phase in
-                                    if let image = phase.image {
-                                        image.resizable()
-                                            .scaledToFill()
-                                            .frame(width: imageSize, height: imageSize)
-                                            .clipped()
-                                            .cornerRadius(5)
-                                        
-                                    } else if phase.error != nil {
-                                        
-                                        Text(phase.error?.localizedDescription ?? "error")
-                                            .foregroundColor(Color.pink)
-                                            .frame(width: imageSize, height: imageSize)
+                        NavigationLink(destination: PhotoDetailView(photoDetails: photoData)) {
+                            HStack {
+                                VStack {
+                                    if photoData.thumbnailUrl != nil {
+                                        ImageLoaderView(url: photoData.thumbnailUrl)
                                     } else {
-                                        ProgressView()
-                                            .frame(width: imageSize, height: imageSize)
+                                        Color.gray.frame(width: imageSize, height: imageSize)
                                     }
+                                }.frame(alignment: .leading)
+                                VStack {
+                                    Text(photoData.title)
+                                        .frame(alignment: .leading)
+                                        .multilineTextAlignment(.leading)
                                 }
-                            }.frame(alignment: .leading)
-                            VStack {
-                                Text(photoData.title)
-                                    .frame(alignment: .leading)
-                                    .multilineTextAlignment(.leading)
-                            }
-                            Spacer()
-                        }.padding(.horizontal)
+                                Spacer()
+                            }.padding(.horizontal)
+                        }.buttonStyle(PlainButtonStyle())
                     }
                 }.navigationTitle("Photos")
                     .onAppear {
                         photosVM.getPhotoAlbum()
+                        URLCache.shared.memoryCapacity = 1024 * 1024 * 512
+                        print("Cache size \(URLCache.shared.memoryCapacity / 1024 )KB")
                     }
             }
         }

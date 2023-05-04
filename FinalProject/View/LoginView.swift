@@ -37,7 +37,7 @@ struct LoginView: View {
             }
             .navigationTitle("Login")
             .navigationDestination(isPresented: $showHomeView) {
-                PostsView()
+                HomeView()
             }
         }
             

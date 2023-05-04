@@ -28,6 +28,16 @@
 		80AAB4F32A02EC3C00AF745F /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB4F22A02EC3C00AF745F /* PhotosModel.swift */; };
 		80AAB4F52A02EC7A00AF745F /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB4F42A02EC7A00AF745F /* PhotosViewModel.swift */; };
 		80AAB4F72A02ED7D00AF745F /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB4F62A02ED7D00AF745F /* PhotosView.swift */; };
+		80AAB4F92A0409D200AF745F /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB4F82A0409D200AF745F /* ImageLoaderView.swift */; };
+		80AAB4FB2A040A0B00AF745F /* ImageLoaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB4FA2A040A0B00AF745F /* ImageLoaderViewModel.swift */; };
+		80AAB4FD2A04102D00AF745F /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB4FC2A04102D00AF745F /* PhotoDetailView.swift */; };
+		80AAB4FF2A04104100AF745F /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB4FE2A04104100AF745F /* PhotoDetailViewModel.swift */; };
+		80AAB5012A04196900AF745F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB5002A04196900AF745F /* HomeView.swift */; };
+		80AAB5032A042BE300AF745F /* CatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB5022A042BE300AF745F /* CatsView.swift */; };
+		80AAB5052A042BF300AF745F /* CatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB5042A042BF300AF745F /* CatsViewModel.swift */; };
+		80AAB5082A042C6000AF745F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 80AAB5072A042C6000AF745F /* WaterfallGrid */; };
+		80AAB50A2A0430AD00AF745F /* CatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB5092A0430AD00AF745F /* CatsModel.swift */; };
+		80AAB50C2A04367C00AF745F /* CatImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAB50B2A04367C00AF745F /* CatImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +82,15 @@
 		80AAB4F22A02EC3C00AF745F /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
 		80AAB4F42A02EC7A00AF745F /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		80AAB4F62A02ED7D00AF745F /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		80AAB4F82A0409D200AF745F /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
+		80AAB4FA2A040A0B00AF745F /* ImageLoaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderViewModel.swift; sourceTree = "<group>"; };
+		80AAB4FC2A04102D00AF745F /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
+		80AAB4FE2A04104100AF745F /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
+		80AAB5002A04196900AF745F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		80AAB5022A042BE300AF745F /* CatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsView.swift; sourceTree = "<group>"; };
+		80AAB5042A042BF300AF745F /* CatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsViewModel.swift; sourceTree = "<group>"; };
+		80AAB5092A0430AD00AF745F /* CatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsModel.swift; sourceTree = "<group>"; };
+		80AAB50B2A04367C00AF745F /* CatImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80AAB5082A042C6000AF745F /* WaterfallGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +187,9 @@
 				80AAB4E82A01933900AF745F /* PostViewModel.swift */,
 				80AAB4EC2A02E0BD00AF745F /* CommentsViewModel.swift */,
 				80AAB4F42A02EC7A00AF745F /* PhotosViewModel.swift */,
+				80AAB4FE2A04104100AF745F /* PhotoDetailViewModel.swift */,
+				80AAB4FA2A040A0B00AF745F /* ImageLoaderViewModel.swift */,
+				80AAB5042A042BF300AF745F /* CatsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -176,9 +199,14 @@
 			children = (
 				80AAB4DB2A00485E00AF745F /* LoginView.swift */,
 				80AAB4DF2A004CFA00AF745F /* RegisterUserView.swift */,
+				80AAB5002A04196900AF745F /* HomeView.swift */,
 				80AAB4E32A016D6600AF745F /* PostsView.swift */,
 				80AAB4F02A02E21100AF745F /* CommentsView.swift */,
 				80AAB4F62A02ED7D00AF745F /* PhotosView.swift */,
+				80AAB4FC2A04102D00AF745F /* PhotoDetailView.swift */,
+				80AAB4F82A0409D200AF745F /* ImageLoaderView.swift */,
+				80AAB5022A042BE300AF745F /* CatsView.swift */,
+				80AAB50B2A04367C00AF745F /* CatImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +217,7 @@
 				80AAB4EA2A0193AE00AF745F /* PostModel.swift */,
 				80AAB4EE2A02E0FA00AF745F /* CommentsModel.swift */,
 				80AAB4F22A02EC3C00AF745F /* PhotosModel.swift */,
+				80AAB5092A0430AD00AF745F /* CatsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +246,9 @@
 			dependencies = (
 			);
 			name = FinalProject;
+			packageProductDependencies = (
+				80AAB5072A042C6000AF745F /* WaterfallGrid */,
+			);
 			productName = FinalProject;
 			productReference = 80AAB4A62A00481600AF745F /* FinalProject.app */;
 			productType = "com.apple.product-type.application";
@@ -289,6 +321,9 @@
 				Base,
 			);
 			mainGroup = 80AAB49D2A00481600AF745F;
+			packageReferences = (
+				80AAB5062A042C6000AF745F /* XCRemoteSwiftPackageReference "WaterfallGrid" */,
+			);
 			productRefGroup = 80AAB4A72A00481600AF745F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -334,19 +369,28 @@
 				80AAB4F32A02EC3C00AF745F /* PhotosModel.swift in Sources */,
 				80AAB4DE2A004A8000AF745F /* CoreDataModel.swift in Sources */,
 				80AAB4EF2A02E0FA00AF745F /* CommentsModel.swift in Sources */,
+				80AAB4FB2A040A0B00AF745F /* ImageLoaderViewModel.swift in Sources */,
 				80AAB4F72A02ED7D00AF745F /* PhotosView.swift in Sources */,
 				80AAB4EB2A0193AE00AF745F /* PostModel.swift in Sources */,
 				80AAB4E42A016D6600AF745F /* PostsView.swift in Sources */,
 				80AAB4E02A004CFA00AF745F /* RegisterUserView.swift in Sources */,
+				80AAB5052A042BF300AF745F /* CatsViewModel.swift in Sources */,
 				80AAB4E22A0164A800AF745F /* LoginViewModel.swift in Sources */,
 				80AAB4E72A018E5900AF745F /* NetworkManager.swift in Sources */,
 				80AAB4B62A00481800AF745F /* FinalProject.xcdatamodeld in Sources */,
 				80AAB4ED2A02E0BD00AF745F /* CommentsViewModel.swift in Sources */,
+				80AAB50C2A04367C00AF745F /* CatImageView.swift in Sources */,
 				80AAB4E92A01933900AF745F /* PostViewModel.swift in Sources */,
 				80AAB4F12A02E21100AF745F /* CommentsView.swift in Sources */,
+				80AAB4FF2A04104100AF745F /* PhotoDetailViewModel.swift in Sources */,
+				80AAB5012A04196900AF745F /* HomeView.swift in Sources */,
 				80AAB4F52A02EC7A00AF745F /* PhotosViewModel.swift in Sources */,
 				80AAB4DC2A00485E00AF745F /* LoginView.swift in Sources */,
+				80AAB4F92A0409D200AF745F /* ImageLoaderView.swift in Sources */,
 				80AAB4AA2A00481600AF745F /* FinalProjectApp.swift in Sources */,
+				80AAB4FD2A04102D00AF745F /* PhotoDetailView.swift in Sources */,
+				80AAB50A2A0430AD00AF745F /* CatsModel.swift in Sources */,
+				80AAB5032A042BE300AF745F /* CatsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +715,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80AAB5062A042C6000AF745F /* XCRemoteSwiftPackageReference "WaterfallGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/paololeonardi/WaterfallGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80AAB5072A042C6000AF745F /* WaterfallGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80AAB5062A042C6000AF745F /* XCRemoteSwiftPackageReference "WaterfallGrid" */;
+			productName = WaterfallGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		80AAB4B42A00481800AF745F /* FinalProject.xcdatamodeld */ = {

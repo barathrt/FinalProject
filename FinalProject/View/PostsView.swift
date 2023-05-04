@@ -52,7 +52,7 @@ struct PostsView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct PostsView_Previews: PreviewProvider {
     static var previews: some View {
         PostsView()
     }
